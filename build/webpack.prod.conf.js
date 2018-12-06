@@ -88,8 +88,6 @@ const webpackConfig = merge(baseWebpackConfig, {
       children: true,
       minChunks: 3
     }),
-
-    // copy custom static assets
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
@@ -98,10 +96,10 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
 
-    // new webpack.DllReferencePlugin({
-    //   context: __dirname, // 与DllPlugin中的那个context保持一致
-    //   manifest: require('./manifest.json'), // 下面这个地址对应webpack.dll.config.js中生成的那个json文件的路径
-    // })
+    new webpack.DllReferencePlugin({
+      context: __dirname, // 与DllPlugin中的那个context保持一致
+      manifest: require('../static/anifest.json'), // 下面这个地址对应webpack.dll.config.js中生成的那个json文件的路径
+    })
   ]
 })
 

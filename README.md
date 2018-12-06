@@ -11,4 +11,5 @@ webpack 优化点
     app 业务代码
 5、 loader 转为多进程
 6、 按需加载
-7、 Gzip进行文件压缩，webpack压缩文件，后台可以再次进行压缩
+7、 DllPlugin 增加开发时打包速度
+8、 Gzip进行文件压缩，webpack压缩文件，后台可以再次进行压缩

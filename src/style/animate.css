@@ -1,0 +1,11 @@
+.animate .common-slide-enter-active {
+  animation: common-slide-in 0.5s linear;
+}
+@keyframes common-slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
